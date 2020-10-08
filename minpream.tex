@@ -1,0 +1,51 @@
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[english,russian]{babel}
+
+\usepackage[left=40mm,right=40mm,top=25mm,bottom=30mm]{geometry}
+\usepackage[skip=.8\baselineskip]{parskip}
+
+\usepackage{setspace}
+\setstretch{1.10}
+
+\usepackage{enumitem}
+\setlist{
+    labelsep=0pt,
+    labelwidth=1.4em,
+    leftmargin=\labelwidth,
+    align=left
+}
+
+
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{cancel}
+\usepackage{bm}
+
+\DeclareMathOperator*{\argmin}{argmin}
+\DeclareMathOperator*{\argmax}{argmax}
+
+
+\usepackage{float}
+\newcommand{\fig}[2][1]{
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=#1\textwidth]{figs/#2}
+    \end{figure}
+}
+
+\newenvironment{tbl}[1]{
+    \begin{table}[h]
+        \small
+        \centering
+        \begin{tabular}{#1}
+        }{
+        \end{tabular}
+    \end{table}
+}
+
+\usepackage{array}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
