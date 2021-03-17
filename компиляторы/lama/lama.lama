@@ -1,0 +1,86 @@
+-- Однострочный коммент
+
+(* Многострочный
+ * коммент *)
+
+-- ; является разделителем, ставить после последней команды не обязательно
+
+-- Примитивы
+var d = 10, s = "hello", c = 'w', b = true;
+
+-- Строка являются массивом однобайтных символов
+-- Символ является ASCII-кодом
+-- true и false являются 1 и 0
+
+-- Присвоение является отдельным инфиксным оператором
+d := 2
+
+-- Функция. После тела разделитель не нужен. Чтобы вернуть значение, нужно
+указать идентификатор последним.
+fun id(x) {x}
+
+-- Контекст. Из контекста должно возвращаться значение.
+(var a; skip);
+
+-- Есть перекрытие имен, одинаковые имена запрещены
+
+-- Массив
+var myarray = [fun () {skip}, "foo"]
+-- Список
+var mylist = {}
+-- S-выражение
+var man = Man ("Jonh", "Smith")
+
+if true then printf("hello"); skip
+elif false then printf("never")
+else skip
+fi
+
+while d do
+  printf("%d%, d--)
+od
+
+do while od
+
+(*
+for scope, expr, expr do
+  scope
+od
+*)
+
+for i , c , s do e od
+i ; while c do e ; s od
+
+for var i; i := 0 , i < 10, i := i + 1 do write (i) od
+
+Dot нотация:
+f (e1, ..., ek)
+e1.f (e2 , ..., ek)
+
+p1:p2 -- шаблон списка с началом p1 и концом p2
+_ -- любое значение
+С (p1, ..., pk) -- Ы
+
+возвращает разницу, подключать ничего не нужно
+compare (x, y)
+
+
+
+
+
+DEC1 = 1
+str1 = "Say: ""hello""!"
+chr = 'a'
+
+var samples = [
+  {"a", "b", "c"},
+  "string",
+  [],
+  Fruit ("apple"),
+  fun () {skip}
+];
+
+fun() {
+  for var i; i := 0, i < samples.length, i := i + 1 do
+    printf (i)
+  od

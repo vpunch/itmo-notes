@@ -1,2 +1,4 @@
 **/texout/*
 !**/texout/*.pdf
+.i
+.s

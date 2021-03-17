@@ -1,0 +1,16 @@
+import List;
+
+var l = {1, 2, 3};
+
+var res1 = case l of f:t -> t +++ {f} esac;
+
+-- TODO hello world
+
+var res2 = fun (f:t) {t +++ {f}} (l);
+
+printf(res1.string ++ "\n");  -- {2, 3, 1}
+printf(res2.string ++ "\n");  -- {2, 3, 1}
+
+var a1 = {1, 2, 3};
+var a2 = 4;
+printf(string({a2} +++ a1))
