@@ -2,3 +2,5 @@
 !**/texout/*.pdf
 .i
 .s
+компиляторы/lama-spec.pdf
+hidden
